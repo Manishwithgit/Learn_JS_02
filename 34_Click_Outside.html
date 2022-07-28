@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click_OutSide</title>
+</head>
+<body>
+    <div class="boards">
+        <div class="board" data-description="Sun is hot">
+            <img src="https://picsum.photos/222?random=1" alt="Sun light">
+            <h2>Sun light</h2>
+            <button>Learn more →</button>
+        </div>
+        <div class="board" data-description=" Green is plant">
+            <img src="https://picsum.photos/222?random=2" alt="Green night">
+            <h2>Green night</h2>
+            <button>Learn more →</button>
+        </div>
+        <div class="board" data-description="Hulk is cool">
+            <img src="https://picsum.photos/222?random=3" alt="Hulk power">
+            <h2>Hulk power</h2>
+            <button>Learn more →</button>
+        </div>
+        <div class="board" data-description="Moon is cool">
+            <img src="https://picsum.photos/222?random=4" alt="Moon knight">
+            <h2>Moon knight</h2>
+            <button>Learn more →</button>
+        </div>
+
+    </div>
+
+    <div>
+        <div class="outer-modal open">
+            <div class="inner-modal">
+                 <p>manish</p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <style>
+
+        body{background: rgb(212, 161, 66);}
+        .boards{
+            display:grid;
+            /* grid-template-columns: repeat(4,1fr); */
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            grid-gap: 5px;
+            padding:2rem ;
+        }
+         
+        .board{ background: white; padding: 1rem; border-radius: 2px;} 
+        .board img{width: 100%;}
+        
+
+        .outer-modal{
+             display: grid;
+             background: rgba(179, 70, 70, 0.4);
+             position: fixed;
+             height: 100vh;
+             width: 100vw;
+             top:0;
+             left:0;
+             justify-content: center;
+             align-items: center;
+             /* hide this modal until we need it */
+             opacity: 0; 
+             pointer-events: none;
+             transition: opacity 0.5s;    
+        }
+
+        .outer-modal img{
+            width: 100%;
+        }
+        .outer-modal .open{
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .inner-modal{
+            max-width: 644px;
+            min-width: 444px;
+            /* padding: 1rem; */
+            border-radius: 5px;
+            min-height: 299px;
+            background: rgb(165, 148, 49); 
+            transform: translateY(-200%);
+            transition: transform 2s;  
+        }
+
+        .outer-modal .open .inner-modal{
+            transform: translateY(0);
+        }
+
+    </style>
+
+
+     <script src="./34_Click_Outside.js"></script>
+
+</body>
+</html>

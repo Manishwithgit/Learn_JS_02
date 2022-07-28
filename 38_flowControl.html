@@ -1,0 +1,50 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <style>body{background: lightcoral;}</style>
+    <script>
+        // empty array
+        // empty object
+        // 1
+        // -10
+        // full string
+        // a string of '0'
+        // 0
+        // undefined variable
+        // variable set to null
+        // a variable set to `'hello' -10` NaN
+        // empty string
+
+
+        // const values=[[], {}, -11, 1, 0, '', 'fullstring', ' ', undefined, NaN, null];
+
+        // values.forEach(val=>{
+        //     console.log(val);
+        // });
+
+
+        const values=[[], {}, -11, 1, 0, '', 'fullstring', ' ', undefined, NaN, null];
+
+         
+        console.group('truth or falsy value');
+
+        values.forEach(val=>{
+            if(val){
+
+                console.log(val, 'is truth');
+            } else{
+                console.log(val, 'is falsy')
+            }
+        });
+
+        console.groupEnd();
+
+    </script>
+  </body>
+  </html>
